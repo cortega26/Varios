@@ -18,8 +18,7 @@ def digito_verificador(RUTsinDV):
 # 2. Que contenga un guión
 # 3. Que contenga un dígito verificador
 
-while True:
-    RUT=input("Ingrese el RUT sin puntos y con guion: ")
+def ValidaRUT(RUT):
     Guion=0
     CantidadDV=0
     Puntos=0
@@ -41,9 +40,11 @@ while True:
         #print(type(digito_verificador(RUTsinDV)))
         if int(DVindicado)==digito_verificador(RUTsinDV):
             print("El RUT es válido")
-            break
         else:
             print("El dígito verificador es incorrecto")
     else:
-        print("El RUT es inválido") 
+        print("El RUT es inválido")
+        
+RUT=input("Ingrese el RUT sin puntos y con guion: ")
+ValidaRUT(RUT)
 print("programa finalizado")
