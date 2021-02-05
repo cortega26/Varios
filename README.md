@@ -1,1 +1,1 @@
-# En esta carpeta depositaré pequeños proyectos que he realizado por práctica o diversión
+# I'll sharing several different projects here
