@@ -1,1 +1,1 @@
-# I'll sharing several different projects here
+# I'll be sharing several different small projects here
