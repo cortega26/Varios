@@ -2,8 +2,7 @@
 
 
 def OrdenaNumeros(lista):    
-    lista2=[]
-    #print ("La lista original es:",lista) 
+    lista2=[] 
     for i in range (len(lista)):
         c=0
         for i in range(len(lista)): 
@@ -13,7 +12,6 @@ def OrdenaNumeros(lista):
             if lista[i]<menor:
                 menor=lista[i]
                 indice=i
-        #print(menor,indice)
         lista2.append(menor)
         lista.remove(menor)
     return lista2
@@ -25,11 +23,5 @@ def DefineList():
         element=int(input(f"insert element {i+1}: "))
         lista.append(element)
     return lista
-
-
-#LdN2=[1,8,28,297,28,-4,0,-8,1000,3,-108,-12]
-
-#LdN2=int(input())
-#print(OrdenaNumeros(LdN2))
 
 print(OrdenaNumeros(DefineList()))
