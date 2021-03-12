@@ -31,9 +31,7 @@ def combination():
       correct=incorrect=0
       round_guesses=[]
       round_solution=[]
-      for k in range(4):
-        #print("solution element: ",k,solution[k])
-        #print("guess element: ",k,guesses[k])
+      for k in range(4):        
         if solution[k]==guesses[k]:
           correct+=1
         else:
@@ -41,11 +39,10 @@ def combination():
           round_solution.append(solution[k])
       for n in range(len(round_guesses)):
           if round_guesses[n] in round_solution:
-            #print("element: ",n)
             incorrect+=1
             round_solution.remove(round_guesses[n])
       
     #print(round_guesses,round_solution)
-    print("correct: ",correct,"incorrect: ",incorrect)
+    print("corrects: ",correct,"incorrects: ",incorrect)
 
 combination()
