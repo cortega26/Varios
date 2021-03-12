@@ -14,7 +14,7 @@ def combination():
   c=random.randint(1,6)
   d=random.randint(1,6)
   solution=[a,b,c,d]
-  print(solution) 
+  #print(solution) 
   turns=0
   while True:
     guesses=[]
