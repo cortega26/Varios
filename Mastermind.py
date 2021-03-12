@@ -2,9 +2,9 @@
 #
 #Rules:
 #The codebreaker tries to guess the pattern, in both order and number.
-#Once placed, the codemaker provides feedback: "correct" means a digit belongs to the solution present and it's placed the right position, "incorrect" means a digit belongs to the solution but is not the right position.
+#Once placed, the codemaker provides feedback: "correct" means a digit belongs to the solution and it's placed the right position, "incorrect" means a digit belongs to the solution but is not the right position.
 #If there are duplicate digits in the guess, they cannot all be awarded a correct/incorrect unless they correspond to the same number of duplicate digits in the hidden code.
-#For example, if the hidden code is 1 1 2 2 and the player guesses 1 1 1 2, the game will award two "correct" for the two 1s, nothing for the third 1 as there is not a third 1 in the code, and a "correct" 2.
+#For example, if the hidden code is 1 1 2 2 and the player guesses 1 1 1 2, the game will award two "correct" for the two 1s, nothing for the third 1 as there is not a third 1 in the code, and a "correct" for the 2.
 #No indication is given of the fact that the code also includes a second 2.
 
 import random
@@ -25,7 +25,7 @@ def combination():
     print(guesses)
     if guesses==solution:
       print(guesses,"is correct. You win.")
-      print("It1 took you",turns,"turns to solve it.")
+      print("It took you",turns,"turns to solve it.")
       break
     else:
       correct=incorrect=0
