@@ -3,7 +3,6 @@
 #If no such subarray is found, return -1.
 
 
-import random
 def subArraySum(arr, n, s):
     firstposition=lastposition=1  
     while True:
