@@ -6,8 +6,8 @@
 #Input:
 #1. The first line of the input contains a single integer T denoting the number of test cases. The description of T test cases follows.
 #2. The first line of each test case contains four space-separated integers A, B, C, and N.
-
-Output: For each test case, print Nth geek-onacci number
+#
+#Output: For each test case, print Nth geek-onacci number
 
 
 def Geekonacci():
