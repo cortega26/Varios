@@ -14,10 +14,7 @@ def Geekonacci():
     T=int(input())
     for i in range(T):
         A,B,C,N=input().split()
-        A=int(A)
-        B=int(B)
-        C=int(C)
-        N=int(N)
+        A,B,C,N=[int(A),int(B),int(C),int(N)]
         for j in range(N-3):
             Geek=A+B+C
             A=B
