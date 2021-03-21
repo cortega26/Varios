@@ -20,8 +20,6 @@ def Geekonacci():
             A=B
             B=C
             C=Geek
-        print(Geek)
-        #print(a)
-    
+        print(Geek)    
 
 Geekonacci()
