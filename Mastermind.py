@@ -18,7 +18,6 @@ def combination():
   while True:
     guesses=[]
     turns+=1
-    #for j in range(4):
     a1,a2,a3,a4=input("Enter your four guesses separated by a space (1 to 6). A number may appear more than once: ").split()
     guesses=[int(a1),int(a2),int(a3),int(a4)]
     print(guesses)
