@@ -18,4 +18,4 @@ Arr1=(1,3,7,4,2)
 Arr2=(4,2,4,7,0,1,6)
 M=5
 N=7
-polyMultiply(Arr1,Arr2,M,N)
+print(polyMultiply(Arr1,Arr2,M,N))
