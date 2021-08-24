@@ -1,1 +1,1 @@
-# I'll be sharing several small projects here
+This folder contains a few exercises I have done
