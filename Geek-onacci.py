@@ -11,15 +11,15 @@
 
 
 def Geekonacci():
-    T=int(input())
+    T = int(input())
     for i in range(T):
-        A,B,C,N=input().split()
-        A,B,C,N=[int(A),int(B),int(C),int(N)]
+        A, B, C, N = input().split()
+        A, B, C, N = [int(A),int(B),int(C),int(N)]
         for j in range(N-3):
-            Geek=A+B+C
-            A=B
-            B=C
-            C=Geek
+            Geek = A + B + C
+            A = B
+            B = C
+            C = Geek
         print(Geek)    
 
 Geekonacci()
