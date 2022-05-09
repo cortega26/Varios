@@ -10,16 +10,12 @@
 #Output: For each test case, print Nth geek-onacci number
 
 
-def Geekonacci():
-    T = int(input())
-    for i in range(T):
-        A, B, C, N = input().split()
-        A, B, C, N = [int(A),int(B),int(C),int(N)]
-        for j in range(N-3):
-            Geek = A + B + C
-            A = B
-            B = C
-            C = Geek
-        print(Geek)    
+def Geekonacci(a: int, b: int, c: int, n: int):
+    for j in range(n-3):
+        geek = a + b + c
+        a = b
+        b = c
+        c = geek
+    return geek    
 
-Geekonacci()
+
