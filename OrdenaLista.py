@@ -1,20 +1,19 @@
-# This code orders a list of N (given) integer numbers without using .sort()
-
+# This code sorts (ascending) a list of N (given) integer numbers without using .sort()
 
 def OrdenaNumeros(lista):    
-    lista2=[] 
+    lista_ordenada = [] 
     for i in range (len(lista)):
-        c=0
-        for i in range(len(lista)): 
-            if c==0:
-                c+=1 
-                menor=lista[0]
-            if lista[i]<menor:
-                menor=lista[i]
-                indice=i
-        lista2.append(menor)
+        flag = True
+        for j in range(len(lista)): 
+            if flag: 
+                menor = lista[0]
+                flag = False
+            if lista[j] < menor:
+                menor = lista[j]
+        lista_ordenada.append(menor)
         lista.remove(menor)
-    return lista2
+    return lista_ordenada
+
 
 def DefineList():
     lista=[]
