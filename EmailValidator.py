@@ -4,8 +4,8 @@ validator = re.compile(r'([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a
 
 def check_mail(email):
     if re.fullmatch(validator, email):
-      print("The mail is valid.")
-    else:
-      print("The mail is not valid.")
-  
-check_mail('example@email.com')
+      return "The mail is valid."
+    return "The mail is not valid."
+
+if __name__ == "__main__":
+    check_mail('example@email.com')
