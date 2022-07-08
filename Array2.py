@@ -6,15 +6,19 @@
 
 def sortedStrings(N,A):
   A.sort()
-  result=[]
+  result = []
   for i in range(N):
-    partial=(A[i],A.count(A[i]))
+    partial = (A[i], A.count(A[i]))
     result.append(partial)
   res = [] 
   [res.append(x) for x in result if x not in res]
   return res
 
 N = 5
-A = ["2234597891 zmxvvxbcij 8800654113 jihgfedcba","1234567891 zxyabcvapo 0123434908 padmadngaa","1234567891 abcdefghij 9876543219 jihgfedcba","2234597891 zmxvvxbcij 8800654113 jihgfedcba","9120121291 zmxvvxbcij 0912114113 mnvxbedcba"]
+A = ["2234597891 zmxvvxbcij 8800654113 jihgfedcba",
+     "1234567891 zxyabcvapo 0123434908 padmadngaa",
+     "1234567891 abcdefghij 9876543219 jihgfedcba",
+     "2234597891 zmxvvxbcij 8800654113 jihgfedcba",
+     "9120121291 zmxvvxbcij 0912114113 mnvxbedcba"]
  
 print(sortedStrings(N,A))
