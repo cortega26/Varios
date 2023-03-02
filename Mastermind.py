@@ -11,40 +11,46 @@
 #nothing for the third 1 as there is not a third 1 in the code, and a "correct" for the 2.
 #No indication is given of the fact that the code also includes a second 2.
 
-import random
-def combination():
-  a=random.randint(1,6)
-  b=random.randint(1,6)
-  c=random.randint(1,6)
-  d=random.randint(1,6)
-  solution=[a,b,c,d]
-  turns=0
-  while True:
-    guesses=[]
-    turns+=1
-    a1,a2,a3,a4=input("Enter your four guesses separated by a space (1 to 6). A number may appear more than once: ").split()
-    guesses=[int(a1),int(a2),int(a3),int(a4)]
-    print(guesses)
-    if guesses==solution:
-      print(guesses,"is correct. You win.")
-      print("It took you",turns,"turns to solve it.")
-      break
-    else:
-      correct=incorrect=0
-      round_guesses=[]
-      round_solution=[]
-      for k in range(4):        
-        if solution[k]==guesses[k]:
-          correct+=1
-        else:
-          round_guesses.append(guesses[k])
-          round_solution.append(solution[k])
-      for n in range(len(round_guesses)):
-          if round_guesses[n] in round_solution:
-            incorrect+=1
-            round_solution.remove(round_guesses[n])
-      
-    #print(round_guesses,round_solution)
-    print("red pegs: ",correct,"white pegs: ",incorrect)
 
-combination()
+import random
+
+
+def get_random_combination():
+    colors = ["red", "orange", "yellow", "green", "blue", "purple", "pink", "brown"]
+    return random.sample(colors, 8)[:4]
+
+  
+def get_player_guess():
+    colors = ["red", "orange", "yellow", "green", "blue", "purple", "pink", "brown"]
+    while True:
+        guesses = input(f"Enter your four guesses separated by a space ({', '.join(colors)}): ").lower().split()
+        if len(guesses) == 4 and all(color in colors for color in guesses) and len(set(guesses)) == 4:
+            return guesses
+        print("Invalid input. Please enter four unique colors from the available options.")
+
+        
+def count_matches(solution, guesses):
+    correct = sum(solution[i] == guesses[i] for i in range(4))
+    incorrect = sum(min(guesses.count(color), solution.count(color)) for color in set(guesses)) - correct
+    return correct, incorrect
+
+  
+def play_combination_game():
+    solution = get_random_combination()
+    turns = 0
+
+    while True:
+        turns += 1
+        guesses = get_player_guess()
+        correct, incorrect = count_matches(solution, guesses)
+
+        if correct == 4:
+            print(guesses, "is correct. You win.")
+            print("It took you", turns, "turns to solve it.")
+            break
+        else:
+            print("red pegs:", correct, "white pegs:", incorrect)
+
+            
+if __name__ == "__main__":
+    play_combination_game()
